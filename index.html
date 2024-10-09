@@ -2,30 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Choice Questions</title>
-    <link rel="stylesheet" href="style.css">
+    <title>jQuery Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <h1>Simple jQuery Quiz</h1>
+    <form id="quizForm">
+        <div>
+            <label>1. What is the capital of France?</label><br>
+            <input type="radio" name="q1" value="Paris"> Paris<br>
+            <input type="radio" name="q1" value="London"> London<br>
+            <input type="radio" name="q1" value="Berlin"> Berlin<br>
+        </div>
+        <div>
+            <label>2. What is 2 + 2?</label><br>
+            <input type="radio" name="q2" value="3"> 3<br>
+            <input type="radio" name="q2" value="4"> 4<br>
+            <input type="radio" name="q2" value="5"> 5<br>
+        </div>
+        <button type="button" id="submitQuiz">Submit</button>
+    </form>
+    <div id="result"></div>
 
-    <div class="quiz-container">
-        <h1>Quiz Time!</h1>
-        <p id="question-text"></p>
+    <script>
+        $(document).ready(function() {
+            var answers = {
+                q1: "Paris",
+                q2: "4"
+            };
 
-        <form id="quiz-form">
-            <div id="answers-container"></div>
-            <button type="submit">Submit</button>
-        </form>
+            $('#submitQuiz').click(function() {
+                var score = 0;
+                var totalQuestions = 2;
 
-        <p id="result"></p>
+                if ($('input[name="q1"]:checked').val() === answers.q1) {
+                    score++;
+                }
+                if ($('input[name="q2"]:checked').val() === answers.q2) {
+                    score++;
+                }
 
-        <!-- Button to go to the next question -->
-        <button id="next-question" style="display:none;">Next Question</button>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-
+                $('#result').html("You scored " + score + " out of " + totalQuestions);
+            });
+        });
+    </script>
 </body>
 </html>
-
