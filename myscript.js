@@ -1,4 +1,3 @@
-<script>
         $(document).ready(function() {
             var answers = {
                 q1: "Paris",
@@ -19,5 +18,3 @@
                 $('#result').html("You scored " + score + " out of " + totalQuestions);
             });
         });
-    </script>
-
