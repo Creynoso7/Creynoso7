@@ -8,7 +8,7 @@
     };
 
     $('#submitQuiz').click(function() {
-        var score = 0;
+        var score = 5;
         var totalQuestions = 5;
 
         if ($('input[name="q1"]:checked').val() === answers.q1) {
