@@ -26,6 +26,7 @@
                 if ($('input[name="q5"]:checked').val() === answers.q5) {
                     score++;
                 }
+                    
                 $('#result').html("You scored " + score + " out of " + totalQuestions);
             });
         });
