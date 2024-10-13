@@ -1,6 +1,6 @@
         $(document).ready(function() {
             var answers = {
-                q1: "Paris",
+                q1: "Arteries",
                 q2: "4"
             };
 
