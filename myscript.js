@@ -2,7 +2,7 @@
     var answers = {
         q1: "Arteries",
         q2: "Tunica interna",
-        q3: "4",
+        q3: "Right side of the lung , to left side of the heart",
         q4: "Separates atria from ventricles",
         q5: "Two semilunar valves"
     };
