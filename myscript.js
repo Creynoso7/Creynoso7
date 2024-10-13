@@ -1,7 +1,7 @@
     $(document).ready(function() {
     var answers = {
         q1: "Arteries",
-        q2: "4",
+        q2: "Tunica interna",
         q3: "4",
         q4: "4",
         q5: "4"
