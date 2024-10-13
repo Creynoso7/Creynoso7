@@ -3,8 +3,8 @@
         q1: "Arteries",
         q2: "Tunica interna",
         q3: "4",
-        q4: "4",
-        q5: "4"
+        q4: "Separates atria from ventricles",
+        q5: "Two semilunar valves"
     };
 
     $('#submitQuiz').click(function() {
